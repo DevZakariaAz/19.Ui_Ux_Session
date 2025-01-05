@@ -1,0 +1,22 @@
+@startuml
+title Saisie d'Absence - Cas d'Utilisation
+left to right direction
+actor Professeur as U
+actor Administrateur as A
+
+rectangle "Actions " {
+    usecase UC1 as "Saisir les absences"
+    usecase UC2 as "Consulter les absences"
+    usecase UC3 as "Modifier une absence"
+    usecase UC4 as "Générer un rapport"
+    usecase UC5 as "Consulter les absences globales"
+}
+
+U -- UC1 : "Enregistre"
+U -- UC2 : "Vérifie"
+U -- UC3 : "Corrige"
+
+A -- UC5 : "Vérifie les absences"
+A -- UC4 : "Crée un rapport"
+
+@enduml
