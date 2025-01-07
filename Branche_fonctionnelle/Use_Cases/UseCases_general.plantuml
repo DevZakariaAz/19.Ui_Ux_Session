@@ -1,8 +1,8 @@
 @startuml
 title Saisie d'Absence - Cas d'Utilisation
 left to right direction
-actor Professeur as U
-actor Administrateur as A
+actor Formateur as U
+actor Responsable_des_stagaires as A
 
 rectangle "Actions " {
     usecase UC1 as "Saisir les absences"
