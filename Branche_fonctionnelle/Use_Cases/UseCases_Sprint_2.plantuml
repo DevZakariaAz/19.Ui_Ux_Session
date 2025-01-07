@@ -2,8 +2,8 @@
 title Saisie d'Absence - Cas d'Utilisation - Sprint 2
 left to right direction
 
-actor Professeur as U
-actor Administrateur as A
+actor Formateur as U
+actor Responsable_des_stagaires as A
 
 rectangle "Sprint 2" {
     usecase UC3 as "Modifier une absence"
