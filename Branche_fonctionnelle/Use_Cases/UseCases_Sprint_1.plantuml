@@ -2,7 +2,7 @@
 title Saisie d'Absence - Cas d'Utilisation - Sprint 1
 left to right direction
 
-actor Professeur as U
+actor Formateur as U
 
 rectangle "Sprint 1" {
     usecase UC1 as "Saisir les absences"
