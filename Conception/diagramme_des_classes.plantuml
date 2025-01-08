@@ -40,7 +40,7 @@ class Stagiaire {
 
 Formateur "1" -- "0..*" Absence
 RH "1" -- "0..*" Absence
-Absence "0..*" -- "1" Session
+Absence "1" -- "1" Session
 RH "1" -- "0..*" Rapport
 Stagiaire "1" -- "0..*" Absence
 @enduml
