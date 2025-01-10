@@ -1,24 +1,16 @@
+# Page d'accueil
 
-# **Page d'accueil**
+Bienvenue sur le rapport du projet. Ce document est une présentation des travaux réalisés dans le cadre de notre projet, avec un aperçu des objectifs, des étapes et des résultats obtenus.
 
-Bienvenue sur la page du projet. Ce document présente les objectifs, les étapes, et les résultats du travail réalisé.
+## Réalisé par :
 
----
+### **Suirita Fahd**
 
-## **Réalisé par**  
+## Encadré par :
 
-- **Zakaria Azizi**
+### **M. Fouad ESSARRAJ**
 
----
+## Liens utiles
 
-## **Encadré par**  
-
-- **M. Fouad ESSARRAJ**
-
----
-
-## **Liens utiles**  
-
-- **[Rapport du projet](./Rapport/index.html)** : Le document complet du projet.  
-- **[Présentation du projet](./Presentation/index.html)** : Une présentation simple du projet.
-
+- [Rapport du projet](./Rapport/index.html)
+- [Présentation du projet](./Presentation/index.html)
