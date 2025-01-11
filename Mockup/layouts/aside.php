@@ -33,13 +33,13 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="/admin/Sanction Rules/create.php" class="nav-link">
+              <a href="/admin/Absence_form/create.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Create rule</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="/admin/Sanction Rules/index.php" class="nav-link">
+              <a href="/admin/Absence_form/index.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Show rules</p>
               </a>

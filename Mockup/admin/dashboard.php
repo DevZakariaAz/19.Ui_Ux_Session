@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <?php
 include_once '../layouts/head.php';
@@ -19,128 +19,35 @@ include_once '../layouts/head.php';
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
-                                            <div class="row">
-                        <div class="col-lg-3 col-6">
-                            <div class="small-box bg-info">
-                                <div class="inner">
-                                    <h3>15</h3>
-                                    <p>Absences aujourd'hui</p>
+                        <div class="row">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Statistiques d'Absences</h3>
                                 </div>
-                                <div class="icon"><i class="fa fa-calendar"></i></div>
-                                <a href="#" class="small-box-footer">Plus de détails <i
-                                        class="fas fa-arrow-circle-right"></i></a>
+                                <div class="card-body">
+                                    <canvas id="absenceChart" width="300" height="200"></canvas>
+                                </div>                                                               
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Statistiques Nombre d'Absences</h3>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="barChart" width="300" height="200"></canvas>
+                                </div>                                                               
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Statistiques Nombre d'Absences</h3>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="radarChart" width="300" height="200"></canvas>
+                                </div>                                                               
                             </div>
                         </div>
-                                                <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">Statistiques d'Absences</h3>
-                            </div>
-                            <div class="card-body">
-                                <canvas id="absenceChart" width="400" height="200"></canvas>
-                            </div>
-                        </div>
-
                     </div>
-
-                        <!-- Ajouter une absence -->
-                        <!-- <div class="row mb-3">
-                            <div class="col-md-6">
-                                <button class="btn btn-primary" type="button">Ajouter une absence</button>
-                            </div>
-                        </div> -->
-
-                        <!-- Filtrer par Séance -->
-                        <!-- <div class="row mb-3">
-                            <div class="col-md-6">
-                                <form class="form-inline">
-                                    <div class="input-group input-group-sm w-100">
-                                        <select name="filter-session" id="filter-session" class="form-control custom-select">
-                                            <option value="" style="color: #ced4da;">Filtrer par Séance</option>
-                                            <option value="seance1">Séance 1</option>
-                                            <option value="seance2">Séance 2</option>
-                                            <option value="seance3">Séance 3</option>
-                                        </select>
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-dark" type="submit">
-                                                <i class="fas fa-filter"></i> Filtrer
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div> -->
-
-                        <!-- Filtrer par Nom -->
-                        <!-- <div class="row mb-3">
-                            <div class="col-md-6">
-                                <form class="form-inline">
-                                    <div class="input-group input-group-sm w-100">
-                                        <input type="text" id="filter-name" name="filter-name" class="form-control"
-                                            placeholder="Filtrer par Nom">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-dark" type="submit">
-                                                <i class="fas fa-filter"></i> Filtrer
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div> -->
-
-                        <!-- Filtrer par Calendrier -->
-                        <!-- <div class="row mb-3">
-                            <div class="col-md-6">
-                                <form class="form-inline">
-                                    <div class="input-group input-group-sm w-100">
-                                        <input type="date" id="filter-date" name="filter-date" class="form-control">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-outline-dark" type="submit">
-                                                <i class="fas fa-filter"></i> Filtrer
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div> -->
-                    <!-- </div>
-                                            
-
-                        <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th style="width: 10px">#</th>
-                                    <th>Nom du Stagiaire</th>
-                                    <th>Seance</th>
-                                    <th>Date</th>
-                                    <th>Statut</th>
-                                    <th style="width: 40px">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Reda Touil</td>
-                                    <td><span class="badge badge-success">Seance 1 </span></td>
-                                    <td>05/01/2025</td>
-                                    <td><span class="badge badge-primary">Absence</span></td>
-                                    <td class="text-center">
-                                        <a href="#"><i class="far fa-eye"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Yasmine Ben</td>
-                                    <td><span class="badge badge-warning">Seance 2</span></td>
-                                    <td>06/01/2025</td>
-                                    <td><span class="badge badge-primary">Absence</span></td>
-                                    <td class="text-center">
-                                        <a href="#"><i class="far fa-eye"></i></a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table> -->
-                    <!-- </div> -->
                     <!-- /.card-body -->
+
                     <div class="card-footer clearfix">
                         <ul class="pagination pagination-sm m-0 float-right">
                             <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
@@ -153,8 +60,59 @@ include_once '../layouts/head.php';
                 </div>
             </div>
         </main>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var ctx = document.getElementById('barChart').getContext('2d');
+                    var barChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Séance 1', 'Séance 2', 'Séance 3'], // Exemple de labels
+                            datasets: [{
+                                label: 'Nombre d\'absences',
+                                data: [5, 10, 8], // Données d'exemple
+                                backgroundColor: '#dc3545',
+                                borderColor: '#dc3545',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                });
+document.addEventListener('DOMContentLoaded', function () {
+    var ctx = document.getElementById('radarChart').getContext('2d');
+    var radarChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ['Présent', 'Absent', 'Retard'], // Catégories
+            datasets: [{
+                label: 'Statut des absences',
+                data: [50, 30, 20], // Données d'exemple
+                backgroundColor: 'rgba(28, 167, 86, 0.2)',
+                borderColor: '#28a745',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scale: {
+                ticks: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+});
+
         document.addEventListener('DOMContentLoaded', function () {
             var ctx = document.getElementById('absenceChart').getContext('2d');
             var absenceChart = new Chart(ctx, {
@@ -162,7 +120,7 @@ include_once '../layouts/head.php';
                 data: {
                     labels: ['Présent', 'Absent', 'Retard'],
                     datasets: [{
-                        data: [60, 30, 10], // Example data
+                        data: [60, 30, 10], // Exemple de données
                         backgroundColor: ['#28a745', '#dc3545', '#ffc107'],
                     }]
                 },
@@ -185,11 +143,9 @@ include_once '../layouts/head.php';
         });
     </script>
 
-
-        <?php
-        include_once '../layouts/footer.php';
-        ?>
-    </div>
+    <?php
+    include_once '../layouts/footer.php';
+    ?>
     <?php
     include_once '../layouts/script-link.php';
     ?>
