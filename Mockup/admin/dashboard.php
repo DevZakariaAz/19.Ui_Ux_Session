@@ -14,49 +14,103 @@ include_once '../layouts/head.php';
         <main class="py-4">
             <div class="content-wrapper">
                 <div class="card card-info">
-                    <div class="card-header">
-                        <h3 class="card-title">Gestion des Absences</h3>
+                    <!-- Card Header -->
+                    <div class="card-header border-transparent">
+                        <h3 class="h3">Tableau de Bord des Absences</h3>
                     </div>
-                    <!-- /.card-header -->
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Statistiques d'Absences</h3>
+
+                    <!-- Row with statistics boxes -->
+                    <div class="row mx-3 mt-4">
+                        <!-- Total Students -->
+                        <div class="col-lg-3 col-6">
+                            <div class="small-box bg-info">
+                                <div class="inner">
+                                    <h3><?= $absenceData['total'] ?? 93 ?></h3>
+                                    <p>Total Étudiants</p>
                                 </div>
-                                <div class="card-body">
-                                    <canvas id="absenceChart" width="300" height="200"></canvas>
-                                </div>                                                               
+                                <div class="icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
                             </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Statistiques Nombre d'Absences</h3>
+                        </div>
+
+                        <!-- Present Students -->
+                        <div class="col-lg-3 col-6">
+                            <div class="small-box bg-success">
+                                <div class="inner">
+                                    <h3><?= $absenceData['present'] ?? 70 ?></h3>
+                                    <p>Présents</p>
                                 </div>
-                                <div class="card-body">
-                                    <canvas id="barChart" width="300" height="200"></canvas>
-                                </div>                                                               
+                                <div class="icon">
+                                    <i class="fas fa-user-check"></i>
+                                </div>
                             </div>
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3 class="card-title">Statistiques Nombre d'Absences</h3>
+                        </div>
+
+                        <!-- Absent Students -->
+                        <div class="col-lg-3 col-6">
+                            <div class="small-box bg-danger">
+                                <div class="inner">
+                                    <h3><?= $absenceData['absent'] ?? 20 ?></h3>
+                                    <p>Absents</p>
                                 </div>
-                                <div class="card-body">
-                                    <canvas id="radarChart" width="300" height="200"></canvas>
-                                </div>                                                               
+                                <div class="icon">
+                                    <i class="fas fa-user-times"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Excused Absences -->
+                        <div class="col-lg-3 col-6">
+                            <div class="small-box bg-warning">
+                                <div class="inner">
+                                    <h3><?= $absenceData['excused'] ?? 3 ?></h3>
+                                    <p>Excusés</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-user-clock"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- /.card-body -->
 
-                    <div class="card-footer clearfix">
-                        <ul class="pagination pagination-sm m-0 float-right">
-                            <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-                        </ul>
+                    <!-- Charts Section -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Statistiques d'Absences</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="absenceChart" width="300" height="200"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Nombre d'Absences</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="barChart" width="300" height="200"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Répartition des Statuts</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="radarChart" width="300" height="200"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Pagination -->
                 </div>
             </div>
         </main>
@@ -64,91 +118,54 @@ include_once '../layouts/head.php';
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    var ctx = document.getElementById('barChart').getContext('2d');
-                    var barChart = new Chart(ctx, {
-                        type: 'bar',
-                        data: {
-                            labels: ['Séance 1', 'Séance 2', 'Séance 3'], // Exemple de labels
-                            datasets: [{
-                                label: 'Nombre d\'absences',
-                                data: [5, 10, 8], // Données d'exemple
-                                backgroundColor: '#dc3545',
-                                borderColor: '#dc3545',
-                                borderWidth: 1
-                            }]
-                        },
-                        options: {
-                            responsive: true,
-                            scales: {
-                                y: {
-                                    beginAtZero: true
-                                }
-                            }
-                        }
-                    });
-                });
-document.addEventListener('DOMContentLoaded', function () {
-    var ctx = document.getElementById('radarChart').getContext('2d');
-    var radarChart = new Chart(ctx, {
-        type: 'radar',
-        data: {
-            labels: ['Présent', 'Absent', 'Retard'], // Catégories
-            datasets: [{
-                label: 'Statut des absences',
-                data: [50, 30, 20], // Données d'exemple
-                backgroundColor: 'rgba(28, 167, 86, 0.2)',
-                borderColor: '#28a745',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            responsive: true,
-            scale: {
-                ticks: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-});
-
         document.addEventListener('DOMContentLoaded', function () {
-            var ctx = document.getElementById('absenceChart').getContext('2d');
-            var absenceChart = new Chart(ctx, {
+            // Doughnut Chart
+            new Chart(document.getElementById('absenceChart').getContext('2d'), {
                 type: 'doughnut',
                 data: {
                     labels: ['Présent', 'Absent', 'Retard'],
                     datasets: [{
-                        data: [60, 30, 10], // Exemple de données
+                        data: [60, 30, 10],
                         backgroundColor: ['#28a745', '#dc3545', '#ffc107'],
                     }]
                 },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                        },
-                        tooltip: {
-                            callbacks: {
-                                label: function (tooltipItem) {
-                                    return `${tooltipItem.label}: ${tooltipItem.raw}%`;
-                                }
-                            }
-                        }
-                    }
-                }
+                options: { responsive: true }
+            });
+
+            // Bar Chart
+            new Chart(document.getElementById('barChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['Séance 1', 'Séance 2', 'Séance 3'],
+                    datasets: [{
+                        label: 'Nombre d\'absences',
+                        data: [5, 10, 8],
+                        backgroundColor: '#dc3545',
+                        borderColor: '#dc3545',
+                    }]
+                },
+                options: { responsive: true, scales: { y: { beginAtZero: true } } }
+            });
+
+            // Radar Chart
+            new Chart(document.getElementById('radarChart').getContext('2d'), {
+                type: 'radar',
+                data: {
+                    labels: ['Présent', 'Absent', 'Retard'],
+                    datasets: [{
+                        label: 'Statut des absences',
+                        data: [50, 30, 20],
+                        backgroundColor: 'rgba(28, 167, 86, 0.2)',
+                        borderColor: '#28a745',
+                    }]
+                },
+                options: { responsive: true }
             });
         });
     </script>
 
-    <?php
-    include_once '../layouts/footer.php';
-    ?>
-    <?php
-    include_once '../layouts/script-link.php';
-    ?>
+    <?php include_once '../layouts/footer.php'; ?>
+    <?php include_once '../layouts/script-link.php'; ?>
 </body>
 
 </html>

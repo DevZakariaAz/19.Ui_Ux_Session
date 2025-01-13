@@ -35,13 +35,13 @@
             <li class="nav-item">
               <a href="/admin/Absence_form/create.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Create rule</p>
+                <p>Create absence</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="/admin/Absence_form/index.php" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Show rules</p>
+                <p>Show Absences</p>
               </a>
             </li>
           </ul>
