@@ -32,19 +32,22 @@
             </p>
           </a>
           <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="/admin/Absence_form/create.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Create absence</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="/admin/Absence_form/index.php" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Show Absences</p>
-              </a>
-            </li>
+              <!-- Create Absence -->
+              <li class="nav-item">
+                  <a href="/admin/Absence_form/create.php" class="nav-link">
+                      <i class="fas fa-plus-circle nav-icon"></i> <!-- Icon for "Create" -->
+                      <p>Create Absence</p>
+                  </a>
+              </li>
+              <!-- Show Absences -->
+              <li class="nav-item">
+                  <a href="/admin/Absence_form/index.php" class="nav-link">
+                      <i class="fas fa-list-alt nav-icon"></i> <!-- Icon for "Show" -->
+                      <p>Show Absences</p>
+                  </a>
+              </li>
           </ul>
+
         </li>
 
 

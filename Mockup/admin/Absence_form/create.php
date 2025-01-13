@@ -53,10 +53,35 @@ include_once '../../layouts/head.php'; // Inclusion de l'en-tête
                                 <label for="trainee">Stagiaire</label>
                                 <select class="form-control" id="trainee" name="trainee" required>
                                     <option value="" selected disabled>Sélectionnez un stagiaire</option>
-                                    <option value="1">Jean Dupont</option>
-                                    <option value="2">Marie Curie</option>
-                                    <option value="3">Ahmed Khalid</option>
-                                    <option value="4">Sara Lee</option>
+                                    <?php
+                                    // Array of names
+                                    $trainees = [
+                                        "Zakaria Azizi",
+                                        "Aoulad Amar Samir",
+                                        "Yahya Boussakla",
+                                        "El Bakali Ayoub",
+                                        "SUIRITA Fahd",
+                                        "BOUGTOUB Samia",
+                                        "El Mrabet Abderrafie",
+                                        "Chabbeh Aymen",
+                                        "TAMRAOUI Abdelouahab",
+                                        "Tribak El yedri Ayoub",
+                                        "ZOUBAIR Douae",
+                                        "BASRI Yahya",
+                                        "Jarane Hamza",
+                                        "El Bouzidi Ayoub",
+                                        "Bennani Kabchi Mohammed Amine",
+                                        "Dehbi Dina",
+                                        "MEZZIANE Mohamed",
+                                        "Ayoub Amazu",
+                                        "Bardich Oussama"
+                                    ];
+
+                                    // Loop through the array to generate options
+                                    foreach ($trainees as $id => $name) {
+                                        echo "<option value=\"" . ($id + 1) . "\">$name</option>";
+                                    }
+                                    ?>
                                 </select>
                             </div>
 
