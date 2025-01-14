@@ -42,9 +42,9 @@ class Comment {
     +updated_at: timestamp
 }
 
-Category "1" -- "*" Article : Contient
-Article "0..*" -- "0..*" Tag : Est associé à
-Article "1" -- "0..*" Comment : Contient
-User "1" -- "0..*" Comment : Publie
-User "1" -- "0..*" Article : Crée
+Category "1" -- "*" Article 
+Article "0..*" -- "0..*" Tag 
+Article "1" -- "0..*" Comment 
+User "1" -- "0..*" Comment 
+User "1" -- "0..*" Article 
 @enduml

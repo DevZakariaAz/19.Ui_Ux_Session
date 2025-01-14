@@ -11,8 +11,8 @@ rectangle "Sprint 2" {
     usecase UC5 as "Consulter les absences globales"
 }
 
-U -- UC3 : "Corrige"
-A -- UC5 : "Vérifie les absences"
-A -- UC4 : "Crée un rapport"
+U -- UC3 
+A -- UC5 
+A -- UC4 
 
 @enduml
