@@ -45,6 +45,6 @@ Formateur "1" -- "0..*" Seance
 Seance "1" -- "0..*" Absence 
 Stagiaire "1" -- "0..*" Absence 
 RH "1" -- "0..*" Rapport 
-RH "1" -- "0..*" Absence 
+RH "1" -- "0..*" Absence : 
 
 @enduml
