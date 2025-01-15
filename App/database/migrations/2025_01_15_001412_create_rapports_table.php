@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('rapports', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('rh_id')->constrained('rh')->onDelete('cascade');
             $table->text('contenu');
-            $table->date('date_creation');
+            $table->date('dateCreation');
             $table->timestamps();
         });
     }

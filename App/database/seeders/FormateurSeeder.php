@@ -1,5 +1,6 @@
 <?php
 
+// database/seeders/FormateurSeeder.php
 namespace Database\Seeders;
 
 use App\Models\Formateur;
@@ -10,15 +11,15 @@ class FormateurSeeder extends Seeder
     public function run()
     {
         Formateur::create([
-            'nom' => 'Jean Dupont',
-            'matiere' => 'Mathematics',
-            'email' => 'jean.dupont@example.com',
+            'nom' => 'Ali Ben',
+            'matiere' => 'Mathématiques',
+            'email' => 'ali.ben@example.com',
         ]);
-
+        
         Formateur::create([
-            'nom' => 'Marie Curie',
-            'matiere' => 'Physics',
-            'email' => 'marie.curie@example.com',
+            'nom' => 'Sara El',
+            'matiere' => 'Physique',
+            'email' => 'sara.el@example.com',
         ]);
     }
 }

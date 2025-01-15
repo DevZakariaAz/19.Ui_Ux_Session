@@ -1,5 +1,6 @@
 <?php
 
+// database/seeders/StagiaireSeeder.php
 namespace Database\Seeders;
 
 use App\Models\Stagiaire;
@@ -10,15 +11,15 @@ class StagiaireSeeder extends Seeder
     public function run()
     {
         Stagiaire::create([
-            'nom' => 'Zakaria Azizi',
-            'email' => 'zakaria.azizi@example.com',
-            'groupe' => 'Group A',
+            'nom' => 'Yassine A',
+            'email' => 'yassine.a@example.com',
+            'groupe' => 'Group 1',
         ]);
 
         Stagiaire::create([
-            'nom' => 'Sami El Kadiri',
-            'email' => 'sami.elkadiri@example.com',
-            'groupe' => 'Group B',
+            'nom' => 'Meryem F',
+            'email' => 'meryem.f@example.com',
+            'groupe' => 'Group 2',
         ]);
     }
 }

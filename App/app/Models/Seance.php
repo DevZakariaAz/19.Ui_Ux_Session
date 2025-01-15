@@ -1,5 +1,6 @@
 <?php
 
+// app/Models/Seance.php
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -9,7 +10,7 @@ class Seance extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['cours', 'horaire', 'duree', 'formateur_id'];
+    protected $fillable = ['cours', 'horaire', 'duree'];
 
     public function formateur()
     {

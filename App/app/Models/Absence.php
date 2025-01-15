@@ -1,5 +1,6 @@
 <?php
 
+// app/Models/Absence.php
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -9,7 +10,7 @@ class Absence extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['date', 'statut', 'seance_id', 'stagiaire_id'];
+    protected $fillable = ['seance_id', 'stagiaire_id', 'date', 'statut'];
 
     public function seance()
     {
@@ -19,10 +20,5 @@ class Absence extends Model
     public function stagiaire()
     {
         return $this->belongsTo(Stagiaire::class);
-    }
-
-    public function rh()
-    {
-        return $this->belongsTo(RH::class);
     }
 }

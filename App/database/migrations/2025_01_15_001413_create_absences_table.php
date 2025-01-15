@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('absences', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('seance_id')->constrained('seances')->onDelete('cascade');
-            $table->foreignId('stagiaire_id')->constrained('stagiaires')->onDelete('cascade');
-            $table->foreignId('rh_id')->nullable()->constrained('rh')->onDelete('cascade');
+            $table->foreignId('seance_id')->constrained();
+            $table->foreignId('stagiaire_id')->constrained();
             $table->date('date');
             $table->string('statut');
             $table->timestamps();

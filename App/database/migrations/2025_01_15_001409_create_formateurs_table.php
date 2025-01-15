@@ -11,21 +11,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('seances', function (Blueprint $table) {
+        Schema::create('formateurs', function (Blueprint $table) {
             $table->id();
-            $table->string('cours');
-            $table->dateTime('horaire');
-            $table->integer('duree');
+            $table->string('nom');
+            $table->string('matiere');
+            $table->string('email');
             $table->timestamps();
         });
     }
 
-
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('seances');
+        Schema::dropIfExists('formateurs');
     }
 };

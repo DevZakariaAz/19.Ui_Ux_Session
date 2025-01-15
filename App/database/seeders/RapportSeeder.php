@@ -1,5 +1,6 @@
 <?php
 
+// database/seeders/RapportSeeder.php
 namespace Database\Seeders;
 
 use App\Models\Rapport;
@@ -10,8 +11,13 @@ class RapportSeeder extends Seeder
     public function run()
     {
         Rapport::create([
-            'contenu' => 'Absence report for January 2025',
-            'dateCreation' => '2025-01-16',
+            'contenu' => 'This is a report for absence handling.',
+            'dateCreation' => now(),
+        ]);
+        
+        Rapport::create([
+            'contenu' => 'This is another report.',
+            'dateCreation' => now(),
         ]);
     }
 }

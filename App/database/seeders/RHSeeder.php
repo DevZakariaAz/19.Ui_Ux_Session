@@ -1,5 +1,6 @@
 <?php
 
+// database/seeders/RHSeeder.php
 namespace Database\Seeders;
 
 use App\Models\RH;
@@ -10,13 +11,13 @@ class RHSeeder extends Seeder
     public function run()
     {
         RH::create([
-            'nom' => 'Ali Ben',
-            'email' => 'ali.ben@example.com',
+            'nom' => 'Khalid M',
+            'email' => 'khalid.m@example.com',
         ]);
 
         RH::create([
-            'nom' => 'Sophie Deschamps',
-            'email' => 'sophie.deschamps@example.com',
+            'nom' => 'Laila B',
+            'email' => 'laila.b@example.com',
         ]);
     }
 }
