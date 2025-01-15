@@ -62,20 +62,7 @@ include_once '../../layouts/head.php'; // Inclusion de l'en-tête
                                         "Yahya Boussakla",
                                         "El Bakali Ayoub",
                                         "SUIRITA Fahd",
-                                        "BOUGTOUB Samia",
-                                        "El Mrabet Abderrafie",
-                                        "Chabbeh Aymen",
-                                        "TAMRAOUI Abdelouahab",
-                                        "Tribak El yedri Ayoub",
-                                        "ZOUBAIR Douae",
-                                        "BASRI Yahya",
-                                        "Jarane Hamza",
-                                        "El Bouzidi Ayoub",
-                                        "Bennani Kabchi Mohammed Amine",
-                                        "Dehbi Dina",
-                                        "MEZZIANE Mohamed",
-                                        "Ayoub Amazu",
-                                        "Bardich Oussama"
+                                        "BOUGTOUB Samia"
                                     ];
 
                                     // Loop through the array to generate options
@@ -92,15 +79,15 @@ include_once '../../layouts/head.php'; // Inclusion de l'en-tête
                                 <div class="checkbox-container">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="sessions[]" id="session1" value="1">
-                                        <label class="form-check-label" for="session1">Séance 1 (10h00 - 12h00)</label>
+                                        <label class="form-check-label" for="session1">Séance 1 (09h00 - 11h15)</label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="sessions[]" id="session2" value="2">
-                                        <label class="form-check-label" for="session2">Séance 2 (13h00 - 15h00)</label>
+                                        <label class="form-check-label" for="session2">Séance 2 (11h35 - 13h50)</label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" name="sessions[]" id="session3" value="3">
-                                        <label class="form-check-label" for="session3">Séance 3 (15h30 - 17h30)</label>
+                                        <label class="form-check-label" for="session3">Séance 3 (14h45 - 17h00)</label>
                                     </div>
                                 </div>
                             </div>

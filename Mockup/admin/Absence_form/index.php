@@ -36,8 +36,21 @@ include_once '../../layouts/head.php'; // Inclusion du fichier d'en-tête
                                     <!-- Exemple de ligne -->
                                     <tr>
                                         <td>Mohamed Ali</td>
-                                        <td>Seance 1 (10:00 - 12:00)</td>
+                                        <td>Seance 1 (9:00 - 11:15)</td>
                                         <td>2025-01-10</td>
+                                        <td>Absence</td>
+                                        <td>
+                                            <div class="btn-group btn-group-sm">
+                                                <a href="./details.php?id=1" class="btn btn-primary" title="Voir"><i class="fas fa-eye"></i></a>
+                                                <a href="./edit.php?id=1" class="btn btn-info" title="Modifier"><i class="fas fa-edit"></i></a>
+                                                <a href="#" class="btn btn-danger" onclick="confirmDelete(1)" title="Supprimer"><i class="fas fa-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Zakaria Azizi</td>
+                                        <td>Seance 2 (11:35 - 13:50)</td>
+                                        <td>2025-01-11</td>
                                         <td>Absence</td>
                                         <td>
                                             <div class="btn-group btn-group-sm">
