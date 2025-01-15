@@ -5,6 +5,7 @@
 include_once '../layouts/head.php';
 ?>
 
+
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
     <div class="wrapper">
         <?php

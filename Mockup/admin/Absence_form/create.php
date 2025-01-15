@@ -4,6 +4,7 @@
 include_once '../../layouts/head.php'; // Inclusion de l'en-tête
 ?>
 
+
 <head>
     <style>
         /* Style pour le conteneur de cases à cocher */
