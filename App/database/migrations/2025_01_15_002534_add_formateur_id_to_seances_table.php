@@ -10,8 +10,8 @@ class AddFormateurIdToSeancesTable extends Migration
     public function up()
     {
         Schema::table('seances', function (Blueprint $table) {
-            $table->unsignedBigInteger('formateur_id')->nullable(); // Add the formateur_id column
-            $table->foreign('formateur_id')->references('id')->on('formateurs')->onDelete('cascade'); // Add foreign key constraint
+            $table->unsignedBigInteger('formateur_id')->nullable();
+            $table->foreign('formateur_id')->references('id')->on('formateurs')->onDelete('cascade');
         });
     }
 
